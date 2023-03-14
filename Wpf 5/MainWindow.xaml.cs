@@ -112,10 +112,10 @@ namespace Wpf_5
             if (saveFileDialog.ShowDialog() == true)
             {
                 File.WriteAllText(saveFileDialog.FileName, textBox.Text);
+                MessageBox.Show("Документ сохранён");
             }
         }
-
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void ExitExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
